@@ -1,0 +1,15 @@
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\obj\Debug\CapaNegocio.Resources.resources
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\obj\Debug\CapaNegocio.vbproj.GenerateResource.Cache
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\obj\Debug\CapaNegocio.vbprojResolveAssemblyReference.cache
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaNegocio.dll
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaNegocio.pdb
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaNegocio.xml
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaAccesoDatos.dll
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaEntidad.dll
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaAccesoDatos.pdb
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaAccesoDatos.xml
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaEntidad.pdb
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\bin\Debug\CapaEntidad.xml
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\obj\Debug\CapaNegocio.dll
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\obj\Debug\CapaNegocio.xml
+c:\users\frank\documents\visual studio 2013\Projects\GestionDeDatosII-ProyectoBasic\CapaNegocio\obj\Debug\CapaNegocio.pdb
