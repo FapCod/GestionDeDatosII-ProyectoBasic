@@ -10,12 +10,32 @@ Sexo char(1) not null
 )
 --Ingresamos una persona a la tabla persona
 INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
-VALUES ('Frank Antonio', 'Piñin Ato',20,'M')
+VALUES ('Frank Antonio', 'Piñin Ato',13,'M')
 INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
-VALUES ('Maria Julieta', 'Villareal Flores',14,'F')
+VALUES ('Mario Julieto', 'Villareal Flores',14,'M')
 INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
-VALUES ('Alejandra', 'Cardenas Ortiz',30,'F')
+VALUES ('Alejandro', 'Cardenas Ortiz',12,'M')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Frank Antonio', 'Piñin Ato',11,'M')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Jose Julieta', 'Villareal Flores',14,'M')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Alejandrin', 'Cardenas Ortiz',17,'M')
+-----mujeres
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Lucia', 'Piñin Ato',13,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Maria Mercedez Julieto', 'Villareal Flores',14,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Sofia', 'Cardenas Ortiz',12,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Carmen', 'Piñin Ato',11,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Marianella', 'Villareal Flores',14,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Anabel', 'Cardenas Ortiz',17,'F')
 
+delete from persona
 --Creamos una tabla de usuarios con sus respectivos datos
 create table Users(
 UserID int identity(1,1) primary key,
@@ -97,8 +117,10 @@ select @totalPMA--Mostramos el resultado
 
 --Ejecutar Segundo procedimiento
 declare @totalPME int --Declaramos la variable
-exec seleccionPME  18, 'M',@totalPME output --Ejecutamos el procedimiento donde M seria Masculino(Hombres)
+exec seleccionPME  18, 'F',@totalPME output --Ejecutamos el procedimiento donde M seria Masculino(Hombres)
 select @totalPME--Mostramos el resultado
+-----seleccionar tabla persona
+select * from persona
 
 --Ejecutar la funcion Cont_Sexo 
 SELECT dbo.Cont_Sexo('F') As [Conteo de Sexos]
@@ -132,6 +154,45 @@ ALTER TABLE persona
 
 Update PERSONA set NOMBRE = 'Jorge Curioso', APELLIDO = 'Piñin Ato',
 EDAD = 20, SEXO= 'M'
-where idPersona = 'Jorge Curioso'
+where idPersona = 1
  
  select * from persona
+
+ ------------------------------------------------------------------------------
+ ----Elimar datos---
+ CREATE procedure EliminarPersona
+(
+ @id int
+)
+as
+delete  from persona
+ where @id = idpersona
+
+GO
+EXEC EliminarPersona  1;  
+select * from persona
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+--------------------Creamos procedimiento de vista----------------------------- 
+CREATE PROCEDURE mostrarPersonasMayoresDE 
+@edad int, --Parametros Entrada
+@sexo varchar(20) --Parametros Entrada
+AS      
+   SELECT * 
+   FROM persona AS p  
+   Where p.Edad >= @edad and p.Sexo= @sexo  
+RETURN  
+GO  
+exec mostrarPersonasMayoresDE 18, 'F'
+
+CREATE PROCEDURE mostrarPersonasMenoresDE 
+@edad int, --Parametros Entrada
+@sexo varchar(20) --Parametros Entrada
+AS      
+   SELECT * 
+   FROM persona AS p  
+   Where p.Edad < @edad and p.Sexo= @sexo  
+RETURN  
+GO  
+exec mostrarPersonasMenoresDE 18, 'M'
