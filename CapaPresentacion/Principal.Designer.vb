@@ -199,9 +199,10 @@ Partial Class Principal
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Gadugi", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(452, -2)
+        Me.Label5.Location = New System.Drawing.Point(439, -2)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(318, 34)
         Me.Label5.TabIndex = 15
@@ -231,6 +232,7 @@ Partial Class Principal
         Me.Controls.Add(Me.btnAgregar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Principal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Principal"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

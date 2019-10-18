@@ -87,7 +87,7 @@ Public Class datPersona
         Return False
     End Function
     Public Function getDataTable(ByVal query As String) As DataTable
-        Dim dt As DataTable
+        'Dim dt As DataTable
         Dim cnn As SqlConnection
         Dim cadena As String
         cadena = "Server=FAPCOD\SQLEXPRESS;DataBase=gestionDII; integrated security=true"

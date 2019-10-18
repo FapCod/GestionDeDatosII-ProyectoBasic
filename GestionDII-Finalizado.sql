@@ -9,6 +9,7 @@ Edad int not null,
 Sexo char(1) not null
 )
 --Ingresamos una persona a la tabla persona
+----hombres
 INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
 VALUES ('Frank Antonio', 'Piñin Ato',13,'M')
 INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
@@ -34,6 +35,32 @@ INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
 VALUES ('Marianella', 'Villareal Flores',14,'F')
 INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
 VALUES ('Anabel', 'Cardenas Ortiz',17,'F')
+----hombres
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Frank Antonio', 'Piñin Ato',21,'M')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Mario Julieto', 'Villareal Flores',32,'M')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Alejandro', 'Cardenas Ortiz',42,'M')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Frank Antonio', 'Piñin Ato',19,'M')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Jose Julieta', 'Villareal Flores',41,'M')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Alejandrin', 'Cardenas Ortiz',20,'M')
+-----mujeres
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Lucia', 'Piñin Ato',67,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Maria Mercedez Julieto', 'Villareal Flores',43,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Sofia', 'Cardenas Ortiz',22,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Carmen', 'Piñin Ato',24,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Marianella', 'Villareal Flores',54,'F')
+INSERT INTO persona("Nombre", "Apellido","Edad","Sexo")
+VALUES ('Anabel', 'Cardenas Ortiz',19,'F')
 
 delete from persona
 --Creamos una tabla de usuarios con sus respectivos datos
@@ -196,3 +223,44 @@ AS
 RETURN  
 GO  
 exec mostrarPersonasMenoresDE 18, 'M'
+
+--------------------------------------------------------
+--------MOSTRAR OBJETOS EN LA BASE DE DATOS-------------
+
+sp_help --> Muestra objetos de la base de datos
+
+sp_helptext eliminarPersona --Texto que define el objeto
+sp_stored_procedures --Muestra todos los procedimientos almacenados
+
+select *from sysobjects  -- muestra nombre y varios datos de todos los objetos de la base de datos actual
+
+
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+-----------------Manejo de BEGIN TRAN , ROLLBACK, COMMIT ------------------------
+
+BEGIN TRAN
+ INSERT INTO Users(userName, passUser) values ('empleado', 'empleado')
+ select @@TRANCOUNT -- para contar cuantas tran hay almacenadas temporalmente
+rollback -- si utilizo este , la tabla vuelve a la normalidad, osea antes de que se agregue este usuario
+commit tran -- por ahora ese usuario esta de forma temporal, si uso este comando, el usuario se queda de forma permanente 
+select * from Users
+delete from Users where userName = 'empleado'
+
+
+--menores de 18 
+Begin tran 
+delete from persona where edad <18 and sexo='M'
+select * from persona 
+rollback
+commit tran 
+
+
+--mayores de 18
+Begin tran 
+delete from persona where edad >=18 and sexo='M'
+select * from persona 
+
+rollback
+commit tran 

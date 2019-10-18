@@ -36,6 +36,10 @@ Partial Class Reporte
         Me.cmbEleccion3 = New System.Windows.Forms.ComboBox()
         Me.btnVer = New System.Windows.Forms.Button()
         Me.btnVer1 = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnRecuperar = New System.Windows.Forms.Button()
+        Me.btnRecuperar1 = New System.Windows.Forms.Button()
+        Me.btnEliminar1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,7 +60,7 @@ Partial Class Reporte
         Me.btnPersonasMenores.BackColor = System.Drawing.Color.Goldenrod
         Me.btnPersonasMenores.Font = New System.Drawing.Font("Gadugi", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPersonasMenores.ForeColor = System.Drawing.Color.White
-        Me.btnPersonasMenores.Location = New System.Drawing.Point(12, 184)
+        Me.btnPersonasMenores.Location = New System.Drawing.Point(11, 197)
         Me.btnPersonasMenores.Name = "btnPersonasMenores"
         Me.btnPersonasMenores.Size = New System.Drawing.Size(227, 69)
         Me.btnPersonasMenores.TabIndex = 1
@@ -98,18 +102,20 @@ Partial Class Reporte
         '
         'cmbEleccion
         '
+        Me.cmbEleccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEleccion.FormattingEnabled = True
         Me.cmbEleccion.Items.AddRange(New Object() {"M", "F"})
-        Me.cmbEleccion.Location = New System.Drawing.Point(244, 92)
+        Me.cmbEleccion.Location = New System.Drawing.Point(12, 62)
         Me.cmbEleccion.Name = "cmbEleccion"
         Me.cmbEleccion.Size = New System.Drawing.Size(121, 24)
         Me.cmbEleccion.TabIndex = 5
         '
         'cmbEleccion1
         '
+        Me.cmbEleccion1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEleccion1.FormattingEnabled = True
         Me.cmbEleccion1.Items.AddRange(New Object() {"M", "F"})
-        Me.cmbEleccion1.Location = New System.Drawing.Point(244, 184)
+        Me.cmbEleccion1.Location = New System.Drawing.Point(12, 167)
         Me.cmbEleccion1.Name = "cmbEleccion1"
         Me.cmbEleccion1.Size = New System.Drawing.Size(121, 24)
         Me.cmbEleccion1.TabIndex = 6
@@ -128,6 +134,7 @@ Partial Class Reporte
         '
         'cmbEleccion2
         '
+        Me.cmbEleccion2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEleccion2.FormattingEnabled = True
         Me.cmbEleccion2.Items.AddRange(New Object() {"M", "F"})
         Me.cmbEleccion2.Location = New System.Drawing.Point(245, 496)
@@ -149,6 +156,7 @@ Partial Class Reporte
         '
         'cmbEleccion3
         '
+        Me.cmbEleccion3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEleccion3.FormattingEnabled = True
         Me.cmbEleccion3.Items.AddRange(New Object() {"M", "F"})
         Me.cmbEleccion3.Location = New System.Drawing.Point(642, 496)
@@ -158,21 +166,57 @@ Partial Class Reporte
         '
         'btnVer
         '
-        Me.btnVer.Location = New System.Drawing.Point(245, 122)
+        Me.btnVer.Location = New System.Drawing.Point(139, 62)
         Me.btnVer.Name = "btnVer"
-        Me.btnVer.Size = New System.Drawing.Size(120, 29)
+        Me.btnVer.Size = New System.Drawing.Size(100, 29)
         Me.btnVer.TabIndex = 11
         Me.btnVer.Text = "VER"
         Me.btnVer.UseVisualStyleBackColor = True
         '
         'btnVer1
         '
-        Me.btnVer1.Location = New System.Drawing.Point(246, 214)
+        Me.btnVer1.Location = New System.Drawing.Point(139, 164)
         Me.btnVer1.Name = "btnVer1"
-        Me.btnVer1.Size = New System.Drawing.Size(120, 29)
+        Me.btnVer1.Size = New System.Drawing.Size(99, 29)
         Me.btnVer1.TabIndex = 12
         Me.btnVer1.Text = "VER"
         Me.btnVer1.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(240, 97)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(124, 23)
+        Me.btnEliminar.TabIndex = 13
+        Me.btnEliminar.Text = "ELIMINAR"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'btnRecuperar
+        '
+        Me.btnRecuperar.Location = New System.Drawing.Point(240, 126)
+        Me.btnRecuperar.Name = "btnRecuperar"
+        Me.btnRecuperar.Size = New System.Drawing.Size(124, 23)
+        Me.btnRecuperar.TabIndex = 14
+        Me.btnRecuperar.Text = "RECUPERAR"
+        Me.btnRecuperar.UseVisualStyleBackColor = True
+        '
+        'btnRecuperar1
+        '
+        Me.btnRecuperar1.Location = New System.Drawing.Point(240, 228)
+        Me.btnRecuperar1.Name = "btnRecuperar1"
+        Me.btnRecuperar1.Size = New System.Drawing.Size(124, 23)
+        Me.btnRecuperar1.TabIndex = 16
+        Me.btnRecuperar1.Text = "RECUPERAR"
+        Me.btnRecuperar1.UseVisualStyleBackColor = True
+        '
+        'btnEliminar1
+        '
+        Me.btnEliminar1.Location = New System.Drawing.Point(240, 199)
+        Me.btnEliminar1.Name = "btnEliminar1"
+        Me.btnEliminar1.Size = New System.Drawing.Size(124, 23)
+        Me.btnEliminar1.TabIndex = 15
+        Me.btnEliminar1.Text = "ELIMINAR"
+        Me.btnEliminar1.UseVisualStyleBackColor = True
         '
         'Reporte
         '
@@ -180,6 +224,10 @@ Partial Class Reporte
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(1176, 566)
+        Me.Controls.Add(Me.btnRecuperar1)
+        Me.Controls.Add(Me.btnEliminar1)
+        Me.Controls.Add(Me.btnRecuperar)
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnVer1)
         Me.Controls.Add(Me.btnVer)
         Me.Controls.Add(Me.cmbEleccion3)
@@ -213,4 +261,8 @@ Partial Class Reporte
     Friend WithEvents cmbEleccion3 As System.Windows.Forms.ComboBox
     Friend WithEvents btnVer As System.Windows.Forms.Button
     Friend WithEvents btnVer1 As System.Windows.Forms.Button
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
+    Friend WithEvents btnRecuperar As System.Windows.Forms.Button
+    Friend WithEvents btnRecuperar1 As System.Windows.Forms.Button
+    Friend WithEvents btnEliminar1 As System.Windows.Forms.Button
 End Class
